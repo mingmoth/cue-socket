@@ -8,12 +8,12 @@ export default function useCurrency(key) {
     const formatNum = (num) => Number((parseFloat(unref(num))) || 0).toFixed(2);
     const getValue = (field) => computed(() => formatNum(data.value?.[field]));
 
-    const change = getValue('p');
+    const change = getValue('P');
     const high = getValue('h');
     const low = getValue('l');
-    const percent = getValue('P');
+    const percent = getValue('p');
     const price = getValue('c');
-    const symbol = getValue('symbol');
+    const symbol = computed(() => data.value?.s);
     const volume = getValue('q');
 
     return { change, connected, high, low, percent, price, stream, symbol, volume }

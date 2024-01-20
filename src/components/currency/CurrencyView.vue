@@ -22,7 +22,7 @@ const currencies = ref([
             v-for="currency in currencies"
             :key="currency.key"
             :currency="currency"
-            />
+        />
     </div>
 </template>
 
@@ -33,7 +33,7 @@ const currencies = ref([
     grid-gap: 16px;
 }
 
-@media (min-width: 430px) {
+@media (min-width: 500px) {
     .currency-view {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -41,7 +41,7 @@ const currencies = ref([
 
 @media (min-width: 768px) {
     .currency-view {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 </style>
