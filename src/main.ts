@@ -6,8 +6,8 @@ import { createPinia } from 'pinia'
 import PrimeVue from 'primevue/config';
 import 'primevue/resources/themes/lara-light-green/theme.css'
 
-import App from './App.vue'
-import router from './router'
+import router from './router';
+import App from './AppLayout.vue';
 
 const app = createApp(App)
 
