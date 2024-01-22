@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
-import Menubar from 'primevue/menubar'
 import { ref } from 'vue';
+import { RouterView } from 'vue-router'
 
 const menuItems = ref([
     {
@@ -25,7 +24,5 @@ const menuItems = ref([
 </script>
 
 <template>
-    <Menubar :model="menuItems">
-    </Menubar>
     <RouterView />
 </template>
