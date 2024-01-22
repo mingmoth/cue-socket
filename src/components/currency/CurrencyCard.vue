@@ -17,9 +17,8 @@ const { key, name } = toRefs(props.currency)
 const { change, connected, high, low, price, percent, stream, symbol, volume } = useCurrencyCard(key)
 
 const cryptoName = computed(() => unref(name).split('/')[0])
-const cryptoImg = computed(() => {
-    return `@/assets/img/${ cryptoName.value.toLowerCase() }.png`
-})
+const cryptoImg = computed(() => cryptoName.value.toLowerCase())
+
 const changeColor = computed(() => {
     return change.value > 0 ? 'green' : 'red'
 })
@@ -33,7 +32,7 @@ const changeColor = computed(() => {
     >
         <template #left>
             <img
-                :src="cryptoImg"
+                :src="`src/assets/img/${ cryptoImg }.png`"
                 alt="currency-img"
                 class="currency-img"
             >

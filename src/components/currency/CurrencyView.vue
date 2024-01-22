@@ -2,6 +2,7 @@
 import { ref } from 'vue';
 // components
 import CurrencyCard from './CurrencyCard.vue'
+import CurrencyChart from '../chart/CurrencyChart.vue'
 
 const currencies = ref([
     {
@@ -24,6 +25,7 @@ const currencies = ref([
             :currency="currency"
         />
     </div>
+    <CurrencyChart />
 </template>
 
 <style scoped>
